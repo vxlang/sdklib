@@ -1,0 +1,13 @@
+EXPORTS
+   VxVirtualizationBegin            
+   VxVirtualizationEnd               
+
+   VxObfuscationBegin            
+   VxObfuscationEnd               
+
+   VxCodeFlatteningBegin
+   VxCodeFlatteningEnd
+
+   VxCodeFlatteningType2Begin
+   VxCodeFlatteningType2End
+
