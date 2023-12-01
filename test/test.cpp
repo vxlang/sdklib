@@ -14,6 +14,23 @@ void __stdcall VxCodeFlatteningType2End();
 
 //
 
+void __stdcall VxCodeFlatteningLv1Begin();
+void __stdcall VxCodeFlatteningLv1End();
+
+void __stdcall VxCodeFlatteningLv2Begin();
+void __stdcall VxCodeFlatteningLv2End();
+
+void __stdcall VxCodeFlatteningLv3Begin();
+void __stdcall VxCodeFlatteningLv3End();
+
+void __stdcall VxCodeFlatteningLv4Begin();
+void __stdcall VxCodeFlatteningLv4End();
+
+void __stdcall VxCodeFlatteningLv5Begin();
+void __stdcall VxCodeFlatteningLv5End();
+
+//
+
 #define VL_OBFUSCATION_BEGIN         VxObfuscationBegin()
 #define VL_OBFUSCATION_END           VxObfuscationEnd()
 
@@ -28,6 +45,11 @@ void __stdcall VxCodeFlatteningType2End();
 
 //
 
+#define VL_CODE_FLATTENING_LV_BEGIN(lv)     VxCodeFlatteningLv##lv##Begin()
+#define VL_CODE_FLATTENING_LV_END(lv)       VxCodeFlatteningLv##lv##End()
+
+//
+
 #ifdef _WIN64
 #pragma comment(lib, "vxlib64.lib")
 #else
@@ -37,11 +59,47 @@ void __stdcall VxCodeFlatteningType2End();
 //
 
 int main() {
-    VL_CODE_FLATTENING_BEGIN;
+    //
 
-    printf("Hello, Wolrd ! \n");
+    VL_CODE_FLATTENING_LV_BEGIN(1);
 
-    VL_CODE_FLATTENING_END;
+    printf("Lv.1 ! \n");
+
+    VL_CODE_FLATTENING_LV_END(1);
+
+    //
+
+    VL_CODE_FLATTENING_LV_BEGIN(2);
+
+    printf("Lv.2 ! \n");
+
+    VL_CODE_FLATTENING_LV_END(2);
+
+    //
+
+    VL_CODE_FLATTENING_LV_BEGIN(3);
+
+    printf("Lv.3 ! \n");
+
+    VL_CODE_FLATTENING_LV_END(3);
+
+#if 0
+    //
+
+    VL_CODE_FLATTENING_LV_BEGIN(4);
+
+    printf("Lv.4 ! \n");
+
+    VL_CODE_FLATTENING_LV_END(4);
+
+    //
+
+    VL_CODE_FLATTENING_LV_BEGIN(5);
+
+    printf("Lv.5 ! \n");
+
+    VL_CODE_FLATTENING_LV_END(5);
+#endif
 
     return 1;
 }
