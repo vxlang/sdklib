@@ -1,82 +1,52 @@
 #include <stdio.h>
 
-//#define USE_VM_MACRO
-#ifdef USE_VM_MACRO
+#define USE_VL_MACRO
+#include "vxlib.h"
+#include "vxlib_signature.h"
+
+//
+
 #ifdef _WIN64
 #pragma comment(lib, "vxlib64.lib")
 #else
 #pragma comment(lib, "vxlib32.lib")
 #endif
 
-void __stdcall VxVirtualizationBegin();
-void __stdcall VxVirtualizationEnd();
-
-void __stdcall VxObfuscationBegin();
-void __stdcall VxObfuscationEnd();
-
-void __stdcall VxCodeFlatteningBegin();
-void __stdcall VxCodeFlatteningEnd();
-
-void __stdcall VxCodeFlatteningType2Begin();
-void __stdcall VxCodeFlatteningType2End();
-
 //
 
-void __stdcall VxCodeFlatteningLv1Begin();
-void __stdcall VxCodeFlatteningLv1End();
+void signature() {
+    VL_CODE_FLATTENING_SIG_LV1_BEGIN;
 
-void __stdcall VxCodeFlatteningLv2Begin();
-void __stdcall VxCodeFlatteningLv2End();
+    printf("SIG: Lv.1 ! \n");
 
-void __stdcall VxCodeFlatteningLv3Begin();
-void __stdcall VxCodeFlatteningLv3End();
+    VL_CODE_FLATTENING_SIG_LV1_END;
 
-void __stdcall VxCodeFlatteningLv4Begin();
-void __stdcall VxCodeFlatteningLv4End();
+    //
 
-void __stdcall VxCodeFlatteningLv5Begin();
-void __stdcall VxCodeFlatteningLv5End();
+    VL_CODE_FLATTENING_SIG_LV2_BEGIN;
 
-//
+    printf("SIG: Lv.2 ! \n");
 
-#define VL_OBFUSCATION_BEGIN               VxObfuscationBegin()
-#define VL_OBFUSCATION_END                 VxObfuscationEnd()
+    VL_CODE_FLATTENING_SIG_LV2_END;
 
-#define VL_CODE_FLATTENING_BEGIN           VxCodeFlatteningBegin()
-#define VL_CODE_FLATTENING_END             VxCodeFlatteningEnd()
+    //
 
-#define VL_CODE_FLATTENING_TYPE2_BEGIN     VxCodeFlatteningType2Begin()
-#define VL_CODE_FLATTENING_TYPE2_END       VxCodeFlatteningType2End()
+    VL_CODE_FLATTENING_SIG_LV3_BEGIN;
 
-#define VL_VIRTUALIZATION_BEGIN            VxVirtualizationBegin()
-#define VL_VIRTUALIZATION_END              VxVirtualizationEnd()
+    printf("SIG: Lv.3 ! \n");
 
-//
+    VL_CODE_FLATTENING_SIG_LV3_END;
 
-#define VL_CODE_FLATTENING_LV_BEGIN(lv)     VxCodeFlatteningLv##lv##Begin()
-#define VL_CODE_FLATTENING_LV_END(lv)       VxCodeFlatteningLv##lv##End()
-#else
-#define VL_OBFUSCATION_BEGIN            
-#define VL_OBFUSCATION_END              
+    return;
+}
 
-#define VL_CODE_FLATTENING_BEGIN        
-#define VL_CODE_FLATTENING_END          
-
-#define VL_CODE_FLATTENING_TYPE2_BEGIN  
-#define VL_CODE_FLATTENING_TYPE2_END    
-
-#define VL_VIRTUALIZATION_BEGIN         
-#define VL_VIRTUALIZATION_END           
-
-//
-
-#define VL_CODE_FLATTENING_LV_BEGIN(lv) 
-#define VL_CODE_FLATTENING_LV_END(lv)   
-#endif
 
 //
 
 int main() {
+
+    signature();
+
     //
 
     VL_CODE_FLATTENING_LV_BEGIN(1);
@@ -100,22 +70,6 @@ int main() {
     printf("Lv.3 ! \n");
 
     VL_CODE_FLATTENING_LV_END(3);
-
-#if 0
-    VL_CODE_FLATTENING_LV_BEGIN(4);
-
-    printf("Lv.4 ! \n");
-
-    VL_CODE_FLATTENING_LV_END(4);
-
-    //
-
-    VL_CODE_FLATTENING_LV_BEGIN(5);
-
-    printf("Lv.5 ! \n");
-
-    VL_CODE_FLATTENING_LV_END(5);
-#endif
 
     return 1;
 }
