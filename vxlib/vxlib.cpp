@@ -60,3 +60,12 @@ void __stdcall VxCodeFlatteningLv3End() {
     return;
 }
 
+//
+
+void __stdcall VxMutateBegin() {
+    return;
+}
+
+void __stdcall VxMutateEnd() {
+    return;
+}

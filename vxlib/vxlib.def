@@ -17,3 +17,5 @@ EXPORTS
    VxCodeFlatteningLv3Begin
    VxCodeFlatteningLv3End
 
+   VxMutateBegin
+   VxMutateEnd

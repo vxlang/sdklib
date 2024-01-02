@@ -21,6 +21,9 @@ void __stdcall VxCodeFlatteningLv2End();
 void __stdcall VxCodeFlatteningLv3Begin();
 void __stdcall VxCodeFlatteningLv3End();
 
+void __stdcall VxMutateBegin();
+void __stdcall VxMutateEnd();
+
 //
 
 #define VL_OBFUSCATION_BEGIN               VxObfuscationBegin()
@@ -36,6 +39,12 @@ void __stdcall VxCodeFlatteningLv3End();
 
 #define VL_CODE_FLATTENING_LV_BEGIN(lv)     VxCodeFlatteningLv##lv##Begin()
 #define VL_CODE_FLATTENING_LV_END(lv)       VxCodeFlatteningLv##lv##End()
+
+//
+
+#define VL_MUTATE_BEGIN                     VxMutateBegin()
+#define VL_MUTATE_END                       VxMutateEnd()
+
 #else
 #define VL_OBFUSCATION_BEGIN            
 #define VL_OBFUSCATION_END              
