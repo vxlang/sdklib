@@ -57,8 +57,8 @@ void TestMutate() {
 
 int main() {
 
-    //signature();
-    TestMutate();
+    signature();
+    //TestMutate();
 
     //
 
