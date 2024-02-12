@@ -42,8 +42,10 @@ void __stdcall VxMutateEnd();
 
 //
 
+#if 0
 #define VL_MUTATE_BEGIN                     VxMutateBegin()
 #define VL_MUTATE_END                       VxMutateEnd()
+#endif
 
 #else
 #define VL_OBFUSCATION_BEGIN            

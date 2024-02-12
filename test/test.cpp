@@ -42,23 +42,9 @@ void signature() {
 
 //
 
-void TestMutate() {
-    VL_MUTATE_BEGIN;
-
-    printf("Mutate ! \n");
-
-    VL_MUTATE_END;
-
-    return;
-}
-
-
-//
-
 int main() {
 
     signature();
-    //TestMutate();
 
     //
 
