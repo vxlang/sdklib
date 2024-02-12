@@ -60,8 +60,9 @@ void __stdcall VxCodeFlatteningLv3End() {
     return;
 }
 
-//
+// VxLang does not support it yet.
 
+#if 0
 void __stdcall VxMutateBegin() {
     return;
 }
@@ -69,3 +70,4 @@ void __stdcall VxMutateBegin() {
 void __stdcall VxMutateEnd() {
     return;
 }
+#endif
