@@ -1,28 +1,37 @@
 #pragma once
 
 #ifdef USE_VL_MACRO
-void __stdcall VxVirtualizationBegin();
-void __stdcall VxVirtualizationEnd();
+extern "C"
+void VxVirtualizationBegin();
+extern "C"
+void VxVirtualizationEnd();
 
-void __stdcall VxObfuscationBegin();
-void __stdcall VxObfuscationEnd();
+extern "C"
+void VxObfuscationBegin();
+extern "C"
+void VxObfuscationEnd();
 
-void __stdcall VxCodeFlatteningBegin();
-void __stdcall VxCodeFlatteningEnd();
+extern "C"
+void VxCodeFlatteningBegin();
+extern "C"
+void VxCodeFlatteningEnd();
 
 //
 
-void __stdcall VxCodeFlatteningLv1Begin();
-void __stdcall VxCodeFlatteningLv1End();
+extern "C"
+void VxCodeFlatteningLv1Begin();
+extern "C"
+void VxCodeFlatteningLv1End();
 
-void __stdcall VxCodeFlatteningLv2Begin();
-void __stdcall VxCodeFlatteningLv2End();
+extern "C"
+void VxCodeFlatteningLv2Begin();
+extern "C"
+void VxCodeFlatteningLv2End();
 
-void __stdcall VxCodeFlatteningLv3Begin();
-void __stdcall VxCodeFlatteningLv3End();
-
-void __stdcall VxMutateBegin();
-void __stdcall VxMutateEnd();
+extern "C"
+void VxCodeFlatteningLv3Begin();
+extern "C"
+void VxCodeFlatteningLv3End();
 
 //
 
@@ -41,11 +50,6 @@ void __stdcall VxMutateEnd();
 #define VL_CODE_FLATTENING_LV_END(lv)       VxCodeFlatteningLv##lv##End()
 
 //
-
-#if 0
-#define VL_MUTATE_BEGIN                     VxMutateBegin()
-#define VL_MUTATE_END                       VxMutateEnd()
-#endif
 
 #else
 #define VL_OBFUSCATION_BEGIN            

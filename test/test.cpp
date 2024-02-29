@@ -14,61 +14,38 @@
 
 //
 
-void signature() {
-    VL_CODE_FLATTENING_SIG_LV1_BEGIN;
+void signature() { 
+    // use signature mode
 
-    printf("SIG: Lv.1 ! \n");
+    VL_CODE_FLATTENING_SIG_BEGIN;
 
-    VL_CODE_FLATTENING_SIG_LV1_END;
+    printf("signature \n");
 
-    //
-
-    VL_CODE_FLATTENING_SIG_LV2_BEGIN;
-
-    printf("SIG: Lv.2 ! \n");
-
-    VL_CODE_FLATTENING_SIG_LV2_END;
-
-    //
-
-    VL_CODE_FLATTENING_SIG_LV3_BEGIN;
-
-    printf("SIG: Lv.3 ! \n");
-
-    VL_CODE_FLATTENING_SIG_LV3_END;
+    VL_CODE_FLATTENING_SIG_END;
 
     return;
 }
 
 //
 
+void test() {
+    VL_CODE_FLATTENING_BEGIN;
+
+    printf("cff ! \n");
+
+    VL_CODE_FLATTENING_END;
+
+    return;
+}
+
 int main() {
 
-    signature();
+    VL_VIRTUALIZATION_BEGIN;
 
-    //
+    test();
+    printf("virtualization \n");
 
-    VL_CODE_FLATTENING_LV_BEGIN(1);
-
-    printf("Lv.1 ! \n");
-
-    VL_CODE_FLATTENING_LV_END(1);
-
-    //
-
-    VL_CODE_FLATTENING_LV_BEGIN(2);
-
-    printf("Lv.2 ! \n");
-
-    VL_CODE_FLATTENING_LV_END(2);
-
-    //
-
-    VL_CODE_FLATTENING_LV_BEGIN(3);
-
-    printf("Lv.3 ! \n");
-
-    VL_CODE_FLATTENING_LV_END(3);
+    VL_VIRTUALIZATION_END;
 
     return 1;
 }

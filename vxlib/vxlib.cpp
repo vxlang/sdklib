@@ -2,61 +2,73 @@
 
 //
 
-void __stdcall VxVirtualizationBegin() {
+extern "C"
+void VxVirtualizationBegin() {
     return;
 }
 
-void __stdcall VxVirtualizationEnd() {
-    return;
-}
-
-//
-
-void __stdcall VxObfuscationBegin() {
-    return;
-}
-
-void __stdcall VxObfuscationEnd() {
+extern "C"
+void VxVirtualizationEnd() {
     return;
 }
 
 //
 
-void __stdcall VxCodeFlatteningBegin() {
+extern "C"
+void VxObfuscationBegin() {
     return;
 }
 
-void __stdcall VxCodeFlatteningEnd() {
-    return;
-}
-
-//
-
-void __stdcall VxCodeFlatteningLv1Begin() {
-    return;
-}
-
-void __stdcall VxCodeFlatteningLv1End() {
+extern "C"
+void VxObfuscationEnd() {
     return;
 }
 
 //
 
-void __stdcall VxCodeFlatteningLv2Begin() {
+extern "C"
+void VxCodeFlatteningBegin() {
     return;
 }
 
-void __stdcall VxCodeFlatteningLv2End() {
+extern "C"
+void VxCodeFlatteningEnd() {
     return;
 }
 
 //
 
-void __stdcall VxCodeFlatteningLv3Begin() {
+extern "C"
+void VxCodeFlatteningLv1Begin() {
     return;
 }
 
-void __stdcall VxCodeFlatteningLv3End() {
+extern "C"
+void VxCodeFlatteningLv1End() {
+    return;
+}
+
+//
+
+extern "C"
+void VxCodeFlatteningLv2Begin() {
+    return;
+}
+
+extern "C"
+void VxCodeFlatteningLv2End() {
+    return;
+}
+
+//
+
+extern "C"
+void VxCodeFlatteningLv3Begin() {
+    return;
+}
+
+extern "C"
+void VxCodeFlatteningLv3End() {
     return;
 }
 
