@@ -14,21 +14,21 @@
 
 //
 
-void signature() { 
+void obfuscate_test() { 
     // use signature mode
 
-    VL_CODE_FLATTENING_SIG_BEGIN;
+    VL_OBFUSCATION_BEGIN;
 
     printf("signature \n");
 
-    VL_CODE_FLATTENING_SIG_END;
+    VL_OBFUSCATION_END;
 
     return;
 }
 
 //
 
-void test() {
+void code_flattening_test() {
     VL_CODE_FLATTENING_BEGIN;
 
     printf("cff ! \n");
@@ -39,11 +39,10 @@ void test() {
 }
 
 int main() {
-
     VL_VIRTUALIZATION_BEGIN;
 
-    test();
-    printf("virtualization \n");
+    obfuscate_test();
+    code_flattening_test();
 
     VL_VIRTUALIZATION_END;
 
