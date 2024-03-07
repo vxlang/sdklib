@@ -36,42 +36,6 @@ void VxCodeFlatteningEnd() {
     return;
 }
 
-//
-
-extern "C"
-void VxCodeFlatteningLv1Begin() {
-    return;
-}
-
-extern "C"
-void VxCodeFlatteningLv1End() {
-    return;
-}
-
-//
-
-extern "C"
-void VxCodeFlatteningLv2Begin() {
-    return;
-}
-
-extern "C"
-void VxCodeFlatteningLv2End() {
-    return;
-}
-
-//
-
-extern "C"
-void VxCodeFlatteningLv3Begin() {
-    return;
-}
-
-extern "C"
-void VxCodeFlatteningLv3End() {
-    return;
-}
-
 // VxLang does not support it yet.
 
 #if 0

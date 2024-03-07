@@ -8,12 +8,4 @@ EXPORTS
    VxCodeFlatteningBegin
    VxCodeFlatteningEnd
 
-   VxCodeFlatteningLv1Begin
-   VxCodeFlatteningLv1End
-
-   VxCodeFlatteningLv2Begin
-   VxCodeFlatteningLv2End
-
-   VxCodeFlatteningLv3Begin
-   VxCodeFlatteningLv3End
 
