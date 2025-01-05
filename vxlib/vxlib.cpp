@@ -15,6 +15,18 @@ void VxVirtualizationEnd() {
 //
 
 extern "C"
+void VxDualModeBegin() {
+    return;
+}
+
+extern "C"
+void VxDualModeEnd() {
+    return;
+}
+
+//
+
+extern "C"
 void VxObfuscationBegin() {
     return;
 }

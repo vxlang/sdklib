@@ -7,6 +7,11 @@ extern "C"
 void VxVirtualizationEnd();
 
 extern "C"
+void VxDualModeBegin();
+extern "C"
+void VxDualModeEnd();
+
+extern "C"
 void VxObfuscationBegin();
 extern "C"
 void VxObfuscationEnd();
@@ -26,6 +31,9 @@ void VxCodeFlatteningEnd();
 
 #define VL_VIRTUALIZATION_BEGIN            VxVirtualizationBegin()
 #define VL_VIRTUALIZATION_END              VxVirtualizationEnd()
+
+#define VL_DUAL_MODE_BEGIN                 VxDualModeBegin()
+#define VL_DUAL_MODE_END                   VxDualModeEnd()
 #else
 #define VL_OBFUSCATION_BEGIN            
 #define VL_OBFUSCATION_END              
@@ -35,4 +43,7 @@ void VxCodeFlatteningEnd();
 
 #define VL_VIRTUALIZATION_BEGIN         
 #define VL_VIRTUALIZATION_END           
+
+#define VL_DUAL_MODE_BEGIN
+#define VL_DUAL_MODE_END
 #endif
